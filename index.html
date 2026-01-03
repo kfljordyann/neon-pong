@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Pong - Ultimate Edition</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+    <h1>Neon Pong</h1>
+
+    <div id="menu">
+        <div class="controls-group">
+            <label>Senshu-mei :</label>
+            <input type="text" id="p1Name" placeholder="Pureiya 1 (Z/S)" value="Pureiya 1">
+            <input type="text" id="p2Name" placeholder="Pureiya 2 (Up/Down)" value="Pureiya 2">
+        </div>
+
+        <div class="controls-group">
+            <label>Gaimu modo :</label>
+            <select id="gameMode">
+                <option value="p1vIA">J1 vs IA</option>
+                <option value="p1vp2">J1 vs J2 (Clavier)</option>
+                <option value="iavia">IA vs IA (Spectacle)</option>
+            </select>
+        </div>
+
+        <div class="controls-group">
+            <label>Gaido ia :</label>
+            <select id="difficulty">
+                <option value="0.05">Kantan😃</option>
+                <option value="0.12">Futsu😐</option>
+                <option value="0.25">Muzukashi😨</option>
+            </select>
+        </div>
+
+        <button onclick="startGame()">Gaimu o kaishi suru</button>
+    </div>
+
+    <div id="game-container">
+        <div id="scoreboard">
+            <span id="score1">0</span>
+            <span id="score2">0</span>
+        </div>
+        <canvas id="pongCanvas" width="800" height="500"></canvas>
+    </div>
+
+    <div id="winner-screen">
+        <h2 id="winner-text"></h2>
+        <p id="match-details"></p>
+        <button onclick="resetMenu()">Menyu ni modoru</button>
+    </div>
+
+    <script  src="script.js"></script>
+</body>
+</html>
